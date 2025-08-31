@@ -33,7 +33,7 @@ export default function HeroSection() {
 
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center gap-6 ml-7">
-          {["Products", "Stories", "Pricing", "Docs"].map((item) => (
+          {["Features" , "Pricing" , "FAQs"].map((item) => (
             <a key={item} href="#" className="relative overflow-hidden h-6 group">
               <span className="block group-hover:-translate-y-full transition-transform duration-300">
                 {item}
