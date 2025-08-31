@@ -17,6 +17,7 @@ const vantaRef = useRef(null);
           scale: 1.0,
           scaleMobile: 1.0,
           color: 0xdd3fff,
+          backgroundColor : 0xf0e11 ,
           maxDistance: 13.0,
           spacing: 11.0,
         })
