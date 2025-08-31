@@ -7,7 +7,7 @@ const HomePage = () => {
   return (
     <div>
       <HeroSection />
-      <Footer />
+      {/* <Footer /> */}
     </div>
   )
 }
