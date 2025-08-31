@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { ShimmerButton } from "../magicui/shimmer-button";
 
 export default function HeroSection() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -15,7 +16,7 @@ export default function HeroSection() {
       {/* Navbar */}
       <nav className="flex items-center border mx-4 max-md:w-full max-md:justify-between border-slate-700 px-6 py-4 rounded-full text-white text-sm relative z-10">
         {/* Logo */}
-        <a href="https://prebuiltui.com">
+        <a href="#">
           <svg
             width="32"
             height="32"
@@ -49,9 +50,13 @@ export default function HeroSection() {
           <button className="border border-slate-600 hover:bg-slate-800 px-4 py-2 rounded-full text-sm font-medium transition">
             Contact
           </button>
-          <button className="bg-white hover:shadow-[0px_0px_30px_14px] shadow-[0px_0px_30px_7px] hover:shadow-white/50 shadow-white/50 text-black px-4 py-2 rounded-full text-sm font-medium hover:bg-slate-100 transition duration-300">
-            Get Started
-          </button>
+         
+          <ShimmerButton className="shadow-2xl">
+                 <span className="whitespace-pre-wrap text-center text-sm font-medium leading-none tracking-tight text-white dark:from-white dark:to-slate-900/10 lg:text-lg">
+                  Get Started
+                </span>
+          </ShimmerButton>
+
         </div>
 
         {/* Mobile Menu Button */}

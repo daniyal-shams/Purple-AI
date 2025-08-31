@@ -8,7 +8,7 @@ const App = () => {
     //     <Background />
     //   </div>  
     //   <div >
-    //    <HomePage />
+      //  <HomePage />
     //   </div>
     // </div>
     <div >
