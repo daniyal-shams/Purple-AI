@@ -5,7 +5,7 @@ import React from 'react'
 
 const HomePage = () => {
   return (
-    <div>
+    <div className='relative flex flex-col items-center bg-black'>
       <HeroSection />
       {/* <Footer /> */}
     </div>

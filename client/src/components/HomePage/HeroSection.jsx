@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 import { ShimmerButton } from "../magicui/shimmer-button";
+import { ArrowRight } from "lucide-react";
+import { TypingAnimation } from "../magicui/typing-animation";
+import { Button } from "../ui/button";
 
 export default function HeroSection() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -9,7 +12,7 @@ export default function HeroSection() {
 
   return (
     <section
-      className="relative flex flex-col items-center bg-black text-white w-full h-screen 
+      className="relative flex flex-col items-center text-white w-full h-screen 
                  bg-[url(https://raw.githubusercontent.com/prebuiltui/prebuiltui/main/assets/hero/bg-gradient-3.svg)] 
                  bg-center bg-cover font-[Poppins]"
     >
@@ -47,9 +50,9 @@ export default function HeroSection() {
 
         {/* Desktop Buttons */}
         <div className="hidden ml-14 md:flex items-center gap-4">
-          <button className="border border-slate-600 hover:bg-slate-800 px-4 py-2 rounded-full text-sm font-medium transition">
+          {/* <button className="border border-slate-600 hover:bg-slate-800 px-4 py-2 rounded-full text-sm font-medium transition">
             Contact
-          </button>
+          </button> */}
          
           <ShimmerButton className="shadow-2xl">
                  <span className="whitespace-pre-wrap text-center text-sm font-medium leading-none tracking-tight text-white dark:from-white dark:to-slate-900/10 lg:text-lg">
@@ -90,17 +93,17 @@ export default function HeroSection() {
                 {item}
               </a>
             ))}
-            <button
+            {/* <button
               onClick={closeMenu}
               className="border border-slate-600 hover:bg-slate-800 px-4 py-2 rounded-full text-sm font-medium transition"
             >
               Contact
-            </button>
+            </button> */}
             <button
               onClick={closeMenu}
               className="bg-white hover:shadow-[0px_0px_30px_14px] shadow-[0px_0px_30px_7px] hover:shadow-white/50 shadow-white/50 text-black px-4 py-2 rounded-full text-sm font-medium hover:bg-slate-100 transition duration-300"
             >
-              Get Started
+              Get Started <ArrowRight />
             </button>
           </div>
         )}
@@ -108,8 +111,8 @@ export default function HeroSection() {
 
       {/* Hero Top Tagline */}
       <div className="flex items-center gap-2 border border-white/15 rounded-full px-4 py-2 text-sm mt-24">
-        <p>Explore how we help grow brands.</p>
-        <a href="#" className="flex items-center gap-1 font-medium">
+        <p>Transform Ideas into Impact with AI at Your Fingertips</p>
+        {/* <a href="#" className="flex items-center gap-1 font-medium">
           Read more
           <svg
             className="mt-0.5"
@@ -127,26 +130,29 @@ export default function HeroSection() {
               strokeLinejoin="round"
             />
           </svg>
-        </a>
+        </a> */}
       </div>
 
       {/* Hero Heading */}
       <h1 className="text-4xl md:text-6xl text-center font-semibold max-w-3xl mt-5 bg-gradient-to-r from-white to-[#748298] text-transparent bg-clip-text">
-        Solutions to Elevate Your Business Growth
+        The Fastest Way to Unlock 
+      <TypingAnimation>AI POWERED GROWTH</TypingAnimation>
       </h1>
       <p className="text-slate-300 md:text-base line-clamp-3 max-md:px-2 text-center max-w-2xl mt-3">
-        Unlock potential with tailored strategies designed for success. Simplify
-        challenges, maximize results, and stay ahead in the competitive market.
+        Experience the ultimate AI playground: chat with multiple models at once, compare responses side-by-side, boost prompts automatically, generate images & audio, customize projects, track tokens, and access a growing prompt library — all from one seamless, cross-platform, subscription-friendly platform.
       </p>
 
       {/* CTA Buttons */}
       <div className="grid grid-cols-2 gap-2 mt-8 text-sm">
-        <button className="px-8 py-3 bg-indigo-600 hover:bg-indigo-700 transition rounded-full">
+        {/* <button className="px-8 py-3 bg-black hover:bg-gray-900 transition rounded-full">
           Get Started
-        </button>
-        <button className="flex items-center gap-2 bg-white/10 border border-white/15 rounded-full px-6 py-3">
+        </button> */}
+        <Button className='px-16 py-6 hover:bg-gray-900 transition rounded-full'>
+          Get Started <ArrowRight />
+        </Button>
+        <Button variant='secondary' className="flex items-center gap-2 rounded-full px-16 py-6">
           <span>Learn More</span>
-          <svg
+          {/* <svg
             className="mt-0.5"
             width="6"
             height="8"
@@ -161,32 +167,11 @@ export default function HeroSection() {
               strokeLinecap="round"
               strokeLinejoin="round"
             />
-          </svg>
-        </button>
+          </svg> */}
+        </Button>
       </div>
 
       {/* Hero Images */}
-      <div
-        aria-label="Photos of leaders"
-        className="mt-12 flex max-md:overflow-x-auto gap-6 max-w-4xl w-full pb-6"
-      >
-        {[
-          "https://images.unsplash.com/flagged/photo-1573740144655-bbb6e88fb18a?q=80&w=735&auto=format&fit=crop",
-          "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?q=80&w=687&auto=format&fit=crop",
-          "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=687&auto=format&fit=crop",
-          "https://images.unsplash.com/photo-1546961329-78bef0414d7c?q=80&w=687&auto=format&fit=crop",
-          "https://images.unsplash.com/photo-1639149888905-fb39731f2e6c?q=80&w=764&auto=format&fit=crop",
-        ].map((src, i) => (
-          <img
-            key={i}
-            alt=""
-            src={src}
-            width="120"
-            height="140"
-            className="w-36 h-44 rounded-lg hover:-translate-y-1 transition duration-300 object-cover flex-shrink-0"
-          />
-        ))}
-      </div>
     </section>
   );
 }
